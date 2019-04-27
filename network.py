@@ -6,6 +6,7 @@ class NeuralNetwork():
         np.random.seed(1)
 
         self.synaptic_weights = 2 * np.random.random((3,1)) - 1
+        
 
     # sigmoid function to normalize inputs
     def sigmoid(self, x):
@@ -44,13 +45,13 @@ if __name__ == "__main__":
     # input values and 1 output value
     training_inputs = np.array([[1,0,1],
                                 [0,1,0],
-                                [1,1,1],
+                                [0,1,1],
                                 [1,0,1]])
 
     training_outputs = np.array([[1,0,0,1]]).T
 
     # Train the neural network
-    neural_network.train(training_inputs, training_outputs, 10000)
+    neural_network.train(training_inputs, training_outputs, 50000)
 
     print("Synaptic weights after training: ")
     print(neural_network.synaptic_weights)

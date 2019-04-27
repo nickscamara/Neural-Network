@@ -12,10 +12,17 @@ def sigmoid_derivative(x):
 training_inputs = np.array([[0,0,1],
                             [1,1,1],
                             [1,0,1],
-                            [0,1,1]])
+                            [0,1,1],
+                            [1,1,1],
+                            [0,0,0],
+                            [0,1,1]]
+                            
+                            
+                            
+                            )
 
 # output dataset
-training_outputs = np.array([[0,1,1,0]]).T
+training_outputs = np.array([[0,1,1,0,1,0,1]]).T
 
 # seed random numbers to make calculation
 np.random.seed(1)
